@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Book reading status</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var eBooks = [
+			{
+				titulo: "Don Quijote de la mancha",
+				autor: "Miguel de Cervantes",
+				Estado: true
+			},
+			{
+				titulo: "Harry Potter",
+				autor: "J. K. Rowling",
+				Estado: false
+			},
+			{
+				titulo: "Manual de manipulación",
+				autor: "Gregory Hartley",
+				Estado: false
+			}];
+		for (var i = 0; i < eBooks.length; i++){
+			var book = ("'" + eBooks[i].titulo + "'" + "escrito por " + eBooks[i].autor + ".");
+			if (eBooks[i].Estado == true) {
+				document.write( "Ya me he leido " + book +"<br>" );
+			}
+			else{
+				document.write("Me tengo que leer " + book + "<br>");
+			}
+		}
+     
+  
+
+	</script>
+</body>
+</html>

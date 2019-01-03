@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+    margin:0;
+}
+body,html{
+    font-family: 'Monsterrat', sans-serif;
+    text-align: center;
+    height: 100%;
+    color:#666;
+    line-height:180%;
+}
+.parallax1{
+    background: url("img/first.jpeg");
+    min-height: 100%;
+}
+.parallax2{
+    background:url("img/second.jpeg");
+    min-height:60%;
+
+}
+.titulo{
+    color:white;
+    font-size: 4rem;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-transform:uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 10px #000;
+}
+section{
+    overflow:auto;
+    padding:50px 80px;
+}
+.two-col{
+    float:left;
+    width:42%;
+    padding:0 4%;
+    text-align: left;
+}
+.colored {
+    padding: 50px 80px;
+    overflox:auto;
+    background-color:#5a97e9;
+    color:#f2f2f2
+}
+.titulo-sm{
+    position:absolute;
+    width: 100%;
+    font-size:250%;
+    top:45%;
+    color: #fff;
+    text-transform:uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px; #000;
+}
+.parallax1, .parallax2{
+    position:relative;
+    opacity: .75;
+    background-position: center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+
+}

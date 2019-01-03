@@ -1,0 +1,54 @@
+
+EJERCICIO PRÁCTICO CRUD DE MONGODB
+
+Preguntar llevan //
+
+//Crear un base de datos de personas.
+use persona
+
+
+//
+Crear una colección de alumnos.
+db.createCollection("alumnos")
+
+//Insertar diez documentos (registros con campos comunes y no comunes)
+  dos con nombre Pepe y tres con nombre María.
+db.alumnos.insertMany([
+{"_id : 1, nombre: "Pepe", apellido : "Juan", edad: 44, colorDePelo : "rubio"},
+{"_id : 2, nombre: "Pepe"},
+{"_id : 3, nombre: "Juan", apellido : "Cersar"},
+{"_id : 4, nombre: "Maria", apellido : "Gomez", edad: 5, colorDePelo: "Azul"},
+{"_id : 5, nombre: "Maria",colorDeOjos:"verde"},
+{"_id : 6, nombre: "Maria",colorDeOjos:"amarillo",colorDePelo : "verde"},
+{"_id : 7, nombre: "Alfonso", apellido : "Sanchez", edad: 21},
+{"_id : 8, nombre: "Rafael", apellido : "Pizarro", email : "rafael123@gmail.com"},
+{"_id : 9, nombre: "Ammad", apellido : "Arlo", email : "Ammadme121@gmail.com"},
+{"_id : 10, nombre: "Jose", apellido : "Sanchez", cursaBootcamp : "si"}])
+
+//Listar todos los documentos que componen la colección estudiantes.
+db.alumnos.find().pretty()
+
+
+//Listar todos los campos de aquellos documentos que contengan el nombre Pepe.
+db.alumnos.find({ nombre : "pepe"})
+
+
+
+//Listar todos los campos de aquellos documentos que contengan el nombre María y que tengan 20 años.
+
+db.alumnos.find({ nombre : "maria", edad:20})
+
+//Mostrar los apellidos de los alumnos que se llamen María.
+db.alumnos.find({nombre : "maria"},{_id:0 , apellidos : 1})
+
+
+//Saber el número de alumnos en total.
+db.alumnos.count()
+
+
+Saber el número de alumnos que se llaman Pepe.
+/
+db.alumnos.count({nombre : "pepe"})
+
+//Obtener sólo el apellido del estudiante que tenga como mail: pp@soypepe.com
+db.alumnos.find({email : "pp@soypepe.com"}, {apellido:1})

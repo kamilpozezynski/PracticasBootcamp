@@ -1,0 +1,30 @@
+body {
+	border: 20px solid #bdc3c7;
+	padding:20px;
+	width: 80%;
+	max-width: 700px;
+	margin:20px auto;
+	font-family: 'roboto';
+}
+h2{
+	color:#2c3e50;
+	font-size: 2.0rem;
+}
+.quote{
+	border-left:5px solid #bdc3c7;
+	padding-left:3px;
+}
+.date{
+	text-transform: uppercase;
+	color:#3498db;
+	letter-spacing: 0.2rem;
+	text-shadow: 0 0 15px blue;
+}
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));    
+}
+.articulo{
+	margin-bottom: 20px;
+}

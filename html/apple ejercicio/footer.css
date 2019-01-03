@@ -1,0 +1,27 @@
+table{
+   padding: 35px;
+   font-family: 'roboto';
+   width: 100%;
+   font-size:10px;
+   margin-right: 100px;
+
+}	
+footer{
+	   background-color: #F0F0F0  ;
+}
+p{
+	font-family: 'roboto';
+	font-size:11px;
+	color:#b0a6a4 ;
+}
+td{
+	color:#b0a6a4;
+    text-align: center;}
+hr{
+	margin-right: 140px;
+	margin-left:155px;
+	color:#b0a6a4;
+}
+th{
+	color:black;
+}

@@ -1,0 +1,60 @@
+*{
+	font-family: 'roboto'
+	margin:0px;
+	padding: 0px;
+}
+.primera_section{
+	margin-left: 25px;
+}
+#pais{
+	display:block;
+	font-size: 15px;
+	width: 100px;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#descripcion{
+	width: 400px;
+	height: 50px;
+	font-size: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#tipo{
+	display:block;
+	font-size: 15px;
+	width: 200px;
+	padding-left: 28px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#City{
+	display:block;
+	font-size: 15px;
+	width: 100px;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#nombre_del_puesto{
+	display:block;
+	font-size: 15px;
+	width: 100px;
+	padding-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+
+}
+label{	font-size: 25px;
+}
+fieldset{
+	border-radius: 5px;
+	border-color: green;
+	padding: 15px;
+	margin-left: 5px;
+}
+legend{
+	font-size: 35px;
+}
+

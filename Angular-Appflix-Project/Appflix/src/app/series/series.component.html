@@ -1,0 +1,43 @@
+<div class="colorDeFondo">
+   <div class="container">
+<!--SEGUIR VIENDO-->
+<div class="titulo">
+  <h2>
+    Seguir Viendo
+  </h2>
+</div>
+
+
+<div class="Wrapper">
+  <div class="items"  *ngFor="let items of peliculas | slice:0:5" ><img width="100%" src="https://image.tmdb.org/t/p/w300{{items.backdrop_path}}?apikey=0e90da3d1d5b2554b95ae8e121183b3a"/> </div>
+</div>
+<!--POPULARES-->
+<div class="titulo">
+  <h2>
+    Populares
+  </h2>
+</div>
+<div class="Wrapper">
+  <div class="items"  *ngFor="let items of peliculas| slice:5:10;"><img  width="100%" src="https://image.tmdb.org/t/p/w300{{items.backdrop_path}}?apikey=0e90da3d1d5b2554b95ae8e121183b3a"/></div>
+</div>
+<!--Comedias-->
+<div class="titulo">
+  <h2>
+    Comedias
+  </h2>
+</div>
+<div class="Wrapper">
+  <div class="items"  *ngFor="let items of peliculas | slice:10:15"><img width="100%" src="https://image.tmdb.org/t/p/w300{{items.backdrop_path}}?apikey=0e90da3d1d5b2554b95ae8e121183b3a"/> </div>
+</div>
+<!--Clásicos-->
+<div class="titulo">
+  <h2>
+    Clásicos
+  </h2>
+</div>
+<div class="Wrapper">
+  <div class="items"  *ngFor="let items of peliculas | slice:15:20"><img width="100%" src="https://image.tmdb.org/t/p/w300{{items.backdrop_path}}?apikey=0e90da3d1d5b2554b95ae8e121183b3a"/> </div>
+</div>
+</div>
+</div>
+ 

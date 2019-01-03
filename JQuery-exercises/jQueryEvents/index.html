@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>jQuery Events</title>
+</head>
+<body>	
+	<h1>
+		jQuery Events
+	</h1>
+	<p>press Me</p>
+	<input type="text" name="" placeholder="hello">
+	<h2>El event "on" utilizando mouseenter que es parecido a hover</h2>
+	<h2>Y despues utilizamos el metodo mouseleave </h2>
+	<script type="text/javascript">
+		//pequeño ejemplo sobre el metodo .click en el cual si quieres referirte al contenido del texto
+		//que lleva dentro el elemento clicado utilizamos el metodo $(this).text() 
+		  $("p").click(function(){
+		  var text = $(this).text();
+		  console.log("has clicado" + " " + text);
+		});
+		  //Demostración de key press
+		  $("input").keypress(function(event){
+		  	if (event.which === 32) {
+		  		console.log("you clicked the space");
+		  	}
+		  });
+		  $("h2").on("mouseenter",function(){
+		  	$(this).css("color","green");
+		  })
+		  $("h2").on("mouseleave",function(){
+		  	$(this).css("color","black");
+		  });
+		
+	</script>
+</body>
+</html>

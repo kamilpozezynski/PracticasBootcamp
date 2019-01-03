@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var nombre;
+		nombre = prompt('tu nombre es:','');
+		document.write("Hola " + nombre + "<br>");
+		function  suma(num1,num2)
+		{
+			var suma;
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			suma = num1 + num2;
+			document.write('la suma es: ' + suma + " Enhorabuena chaval! ya no necesitas sumar con tu mente!");
+		}
+		function resta(num1,num2)
+		{
+			var resta;
+			num1 = parseInt(num1);
+			num2 = parseInt(num2);
+			resta = num1 - num2;
+			document.write('la resta es:' + resta + " Enhorabuena chaval! ya no necesitas sumar con tu mente!");
+		}
+ 		
+ 		var n, n1, n2;
+ 		n = prompt('Pulse 1 para suma, 2 para resta ' + nombre,'')
+ 		n = parseInt(n);
+
+ 		switch (n){
+ 			case 1:
+ 			n1 = prompt('Introduzca numero: ' + nombre ,'');
+ 			n2 = prompt('Introduzca numero: ' + nombre ,'');
+ 			suma(n1, n2);
+ 			break;
+
+ 			case 2:
+ 			n1 = prompt('Introduzca numero: ' + nombre,'');
+ 			n2 = prompt('Introduzca numero: ' + nombre,'');
+ 			resta(n1, n2);
+
+ 		}
+	</script>
+
+</body>
+</html>

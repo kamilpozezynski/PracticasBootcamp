@@ -1,0 +1,27 @@
+img{
+	width:160px;
+	height: 150px;
+}
+nav {
+	float: right;
+	margin-top:-90px;
+	margin-right: 400px;
+	background-color:green;
+}
+li{
+	float: left;
+    padding: 10px;
+    list-style: none;
+    letter-spacing: 1px
+}
+a{
+	font-family: cursive;
+	color: black;
+}
+header{
+	background-color:darkblue;
+}
+img{
+	width: 150px;
+	height: 150px;
+}

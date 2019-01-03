@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Introduction</title>
+	<meta charset="utf-8">
+		<!-- 2 Maneras de meter JQuery por link o por archivo descargado-->
+	<script type="text/javascript" src="jQuery.js"></script>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>jQuery Exercise</h1>
+	<div>Div 1</div>
+	<div id="third">Div 2</div>
+	<div class="highlight">Div 3</div>
+	<div class="highlight">Div 4</div>
+	<script type="text/javascript">
+			//jQuery exercise questions:
+		//1. Select all divs and give them a purple background 
+		//Solution:
+		 $("div").css("backgroundColor","purple");
+		//2.Select all highlight class divs and give them a 200px width
+		//Solution:
+		 $(".highlight").css("width","200px",);
+		//3.Select the div with id third and give it a border color pink
+		//Solution:
+		 $("#third").css("border","2px solid green");
+		//4.Select only the 1st div and give it a pink color
+		//Solution:
+		$("div:first-of-type").css("color","pink")
+	-->	
+	</script>
+
+</body>
+</html>

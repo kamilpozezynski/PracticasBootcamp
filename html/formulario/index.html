@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title></title>
+</head>
+<body>
+	<h1>Formulario para oferta de trabajo:</h1>
+	<fieldset><legend><strong>Datos del puesto</strong></legend>
+	<section class="primera_section">
+		
+		<label for="nombre_del_puesto">Nombre del puesto
+		<select id="nombre_del_puesto" fieldset>
+			<option value="1">Director</option>
+			<option value="2">Gerente</option>
+			<option value="3">Técnico</option>
+		</select>
+		</label>
+		<label for="pais">Pais
+		<select id="pais">
+			<option value="4">España</option>
+			<option value="5">Francia</option>
+			<option value="6">Polonia</option>
+		</select>
+		</label>
+		<label for="City">City:
+		<input type="text" name="city" list="ciudades"
+		id="City">
+		 <datalist>
+ 		<option value="Madrid">Madrid</option>
+ 		<option value="Paris">Paris</option>
+ 		<option value="Malaga">Malaga</option>
+ 		<option value="Warszawa">Warszawa</option>
+ 		<option value="Toulosee">Toulosse</option>
+ 		<option value="Wroclaw">Wroclaw</option>
+ 		</datalist>
+		</label>
+		<label for="tipo">Tipo
+		<select id="tipo">
+			<option value="7">Content delivery</option>
+			<option value="8">Data Analitic</option>
+			<option value="9">Junior</option>
+		</select>
+		</label>
+		<label for="descripcion" id="descripcion">
+		<textarea id="descripcion" placeholder="Detalle brevemente su experiencia"></textarea>
+	</section>
+	</label>
+</fieldset>
+</body>
+</html>

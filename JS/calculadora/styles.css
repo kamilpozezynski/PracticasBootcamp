@@ -1,0 +1,48 @@
+/* escogemos un estilo de letra y quitamos el margen y padding de la pagina*/
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'roboto';
+/* añado un tamaño igual para las casillas de ambos valores*/
+}
+input{
+	font-size: 15px;
+	width: 200px;
+	height: 40px;
+	padding-left: 10px;
+	display: inline-block;
+	color:green;
+}
+/* creo una id con el nombre espacio para darle un 20% de margen al primer bloque*/
+#espacio{
+	margin-left: 20%;
+}
+/* le doy un 5% de margen a mi formulario de la parte superior.*/
+form{
+	margin-top :5%;
+}
+/* Le doy margen al titular h1 de la pagina  */
+h1{
+	margin-top: 5%;
+	margin-left: 20%;
+}
+/* le doy estilo y tamaño  a la box de operadores*/
+#operador{
+	width: 60px;
+	height: 40px;
+	padding-left: 0px;
+	color:green;
+	width: 60px;
+	height: 40px;
+	padding-left: 0px;	
+}
+/* le doy estilo al div que cre abajo para obtener el resultado
+y le di un estilo inline para que se agrupe a la izquierda de 
+calcula en ved de que salte a la siguiente linea.*/
+div{
+	display: inline;
+	height: 40px;
+	width: 100px;
+	border-color: black;
+	color:green;
+}

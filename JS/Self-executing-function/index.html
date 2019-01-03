@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Funcion anonima:</title>
+</head>
+<body>
+	<script type="text/javascript">
+		(function (x, y){
+
+			alert('the sum of x & y=' + (x + y));
+
+		})(15,25);
+// con return value
+	var suma = (function (x, y)
+	{
+		return x + y
+	})(25,55);
+
+	document.write('el resultado de la suma es:' + suma)
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.container{
+    width: 500px;
+    height: 300px;
+    background-color:yellow;
+    display:flex;
+¡    flex-wrap:wrap;
+    flex-direction:row;
+    margin:0 auto;
+}
+.items{
+    background-color:purple;
+    width: 100px;
+    height: 100px;
+    color:#fff;
+    text-align:left;
+    line-height:100px;
+    margin-right:10px;
+}

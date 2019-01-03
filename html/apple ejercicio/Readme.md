@@ -1,0 +1,1 @@
+// this Project purpose is to replicate the header and the footer of the Apple page. using only Float Model, Position Absolute or tables.

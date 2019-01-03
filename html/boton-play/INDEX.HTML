@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Prueba de video</title>
+</head>
+<body>
+	<video width="100%" id="video">
+		<source src="testing.mp4" type="video/mp4">
+		<p>contenido fallback</p>
+	</video>
+	<input type="Button" id="Play" value="play">
+	<input type="Button" id="Stop">
+	<input type="Button" id="Pause">
+	<input type="Button" id="Rewind">
+	<input type="Button" id="Forward">
+
+	<script type="text/javascript">
+		let Play = document.getElementById("Play");
+		let videoreference = document.getElementById("video");
+			function playVideo (e) {
+				videoreference.play();
+			}
+			Play.addEventListener("click", playVideo)
+		
+	</script>
+</body>
+</html>

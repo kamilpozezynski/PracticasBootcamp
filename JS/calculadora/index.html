@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>Ejercicio de calculadora</title>
+</head>
+<body>
+	<!-- Creamos el header-->
+	<h1>Ejercicio de crear suma, resta, multiplicacion y division </h1>
+	<!-- Le decimos la ruta del script.-->
+	<script type="text/javascript" src="js.js"></script>
+	<!-- Creamos un formulario -->
+		<form>
+			<!-- creamos tres input type text con sus ID para poder cogerlos con el document.query selector-->
+			<label for="num1" id="espacio">Calcule:</label>
+			<input type="text" name="numero1" placeholder="put the first number here" id="value1">
+			<!--  Creamos un select para que el cliente pueda escoger que tipo de operacion hacer -->
+			<select id="operador">
+				<option value="Suma">Suma</option>
+				<option value="Resta">Resta</option>
+				<option value="Division">Division</option>
+				<option value="Multiplicacion">Multiplicacion</option>
+			</select>
+			<input type="text" name="numero2" placeholder="put the second number here" id="value2">
+			<!-- Creamos un boton para calcular-->
+			<!--  tambien creamos un div para poder sacar el resultado.-->
+			<input type="button" name="calcular" value="calcular" id="calcular" onclick="calc()">
+			<div id="resultado"><input type="text" name="resultado" placeholder="resultado"></div>
+			
+		</form>
+</body>
+</html>

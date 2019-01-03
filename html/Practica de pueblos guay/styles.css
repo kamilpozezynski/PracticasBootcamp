@@ -1,0 +1,92 @@
+
+table tr th a{
+	color:black;
+	padding-bottom: 3%;
+	padding-left: 200px;
+}
+.logo{
+	position:relative;
+	left: 45%;
+}
+nav{
+	float: right;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+li{
+	float: left;
+	padding:25px;
+	list-style: none;
+}
+.titulos{
+	color:green;
+	text-align: center;
+}
+.subtitulo{
+	font-size: 20px;
+	padding-left: 40%;
+}
+
+body{
+	font-family: 'roboto'
+
+}
+
+section{
+	background: linear-gradient(to right, rgba(47,45,46,.7),rgba(47,45,46,.7)), url("img/background.jpg") ;
+    background-size: cover;
+    color:white;
+ 	width: 100%;
+}
+
+a{
+	color:white;
+	text-decoration: none;
+}
+.ultimas_noticias{
+	padding-left: 45%;
+	font-size:35px;
+}
+.hoguera{
+	float: left;
+	border: 5px solid #BDBDBD;
+	background: #E0E0E0;
+	padding: 5px;
+	margin-right:30px;
+}
+figcaption{
+	position: relative;
+	top: 250px;
+	right: 340px;
+			
+}
+.texto{
+	text-align: left;
+	margin-left: 10px;
+	padding-right: 100px;
+}
+hr{
+	color:gray;
+}
+article{
+	position: relative;
+}
+.clear{
+	margin-top: 100px;
+	clear: both;
+}
+.candelario{
+	float: left;
+	border: 5px solid #BDBDBD;
+	background: #E0E0E0;
+	padding: 5px;
+	width: 320px;
+	height: 244px;
+	margin-right:40px;
+}
+.texto1{
+	text-align: left;
+	margin-left: 10px;
+	padding-right: 100px;
+	display: block;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// ejercicio switch
+		var num;
+		num = prompt('introduce un número aquí',"");
+		num = parseInt(num);
+
+		switch(num) {
+			case 1:
+			document.write('Escogiste el numero 1');
+			break;
+			case 2:
+			document.write('Escogiste el numero 2');
+			break;
+			case 3:
+			document.write('Escogiste el numero 3');
+			break;
+			default:
+			alert('Escogiste un numero diferente de uno a tres');
+			num = prompt('escoja un numero del 1 al 3','');
+			document.write('escogiste el numero'+ " " + num)
+			break;
+
+		}
+
+	</script>
+
+</body>
+</html>

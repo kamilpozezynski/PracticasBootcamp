@@ -1,0 +1,8 @@
+AÑADIR UN NUEVO SEGUIDOR A UN USUARIO
+db.usuarios.update({ __id: 1 }, {$addToSet:{userFallows:ObjectId("3")}  });
+
+Eliminar un tag al que está suscrito
+db.usuarios.update(_id:objectId("1")}, {$pull:{tagsLike: {Tag_id:111}}  });
+
+Añade dos tags y elimina a todos los usuarios a los que sigue:
+db.usuarios.update({_id: objectId("1")},{$addToSet:{tagsLike:{tag_Id:222,tagName:"tag2" }},{tagsLike:{tag_Id:333,tagName:"tag3"}}, {$pull:{userFallows:*}}

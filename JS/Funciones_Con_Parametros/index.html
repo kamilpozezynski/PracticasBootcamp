@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+		
+	<script type="text/javascript">
+	 function Suma(num1, num2)
+  {
+    var suma; 
+	num1 = parseInt(num1);
+	num2 = parseInt(num2);
+	suma = num1 + num2;
+	
+	document.write('La suma es: ', suma);
+  }
+  
+  function Resta(num1, num2)
+  {
+    var resta; 
+	num1 = parseInt(num1);
+	num2 = parseInt(num2);
+	resta = num1 - num2;
+	
+	document.write('La resta es: ', resta);
+  }
+
+  var n, n1, n2;
+  
+  document.write('1. Suma<br>');
+  document.write('2. Resta<br><br>');
+  
+  n = prompt('Elige funcion: ', '');
+  n = parseInt(n);
+  
+  switch (n)
+  {
+	case 1: 
+	  n1 = prompt('Introduzca numero: ', '');
+	  n2 = prompt('Introduzca numero: ', '');
+	  Suma(n1, n2);
+	  break;
+	case 2: 
+	  n1 = prompt('Introduzca numero: ', '');
+	  n2 = prompt('Introduzca numero: ', '');
+	  Resta(n1, n2);
+	  break;
+  }		
+	</script>
+
+
+</body>
+</html>

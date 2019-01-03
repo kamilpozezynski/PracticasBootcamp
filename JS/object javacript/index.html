@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+ //JavaScript Objects 
+
+ //way #1 to define and create object using new keyword
+/*
+var person = new Object();
+person.firstName = "Russell";
+person.lastName = "Brown";
+person.height = 5.10;
+person.age = 25;
+person.fullName = function() {
+    
+    return (person.firstName + " " + person.lastName);  
+}
+
+alert(person.firstName);
+alert(person["age"]);
+alert(person.fullName());
+
+
+
+// way #2 to define and create object using object constructor
+// this keyword means, the object itself
+
+function Person(fName, lName, hg, age) {
+    
+    this.firstName = fName;
+    this.lastName = lName;
+    this.height = hg;
+    this.age = age;
+    this.fullName = function() {
+        
+        return (this.firstName + " " + this.lastName);
+    }
+}
+
+var myBrother = new Person("Russell", "Brown", 5.10, 25);
+var mySister = new Person("Sara", "Brown", 5.11, 18);
+
+alert(myBrother.firstName);
+alert(myBrother.fullName());
+
+
+alert(mySister.firstName);
+alert(mySister.fullName());
+
+var myCar = {
+	name: "bmw",
+	cv: "180",
+	color: "green"
+};
+var v = ""
+for (var k in myCar){
+		v = v + myCar[k] + " ";
+}
+alert(v)
+*/
+var mycars = [
+		{model : "bmw", color: "green"},
+		{model : "honda", color: "blue"},
+		{model : "toyota", color: "auris"}
+];
+	for(var k = 0, mycars.lenght<k,k++){
+		var mycars = "";
+		for (var cp in mycars[k]){
+			my car = mycar + mycars[k][cp];
+		}
+		document.write(mycar);
+	}
+
+	</script>
+
+
+</body>
+</html>

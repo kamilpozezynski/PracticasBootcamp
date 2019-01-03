@@ -1,0 +1,38 @@
+2.- ordenar por ciudad, ascendente, y sólo obtener los cuatro primeros documentos
+
+db.ciudades.find().sort({ciudad:1}).limit(4)
+3.- ordenar por población descendente
+
+db.ciudades.find({},{ciudad:1,habitantes:1,_id:0}).sort({habitantes:-1})
+4.- obtener las ciudades que empiecen por “M”
+
+
+db.ciudades.find({ciudad:/^M/},{ciudad:1,_id:0})
+
+5.- ordenar , a la vez, primero por nombre (desc) y luego por número de habitantes (asc)
+
+db.ciudades.find({},{ciudad:1,_id:0,habitantes:1}).sort({ciudad:-1,habitantes:1})
+
+6.- Obtener aquellas ciudades que sean capital, y mostrarlo.
+
+db.ciudades.find({capital:{$exists:1}})
+
+7.- Mostrar el nombre de  las ciudades que superen un millón de habitantes
+
+db.ciudades.find({habitantes:{$gte:1000000}},{_id:0,ciudad:1})
+
+8.-¿qué devolverá la consulta: db.ciudades.find({ciudad:{$in:['Avila','Zamora','Madrid']}})?
+
+todos los documentos que contengan el campo ciudad;
+en ese campo ciudad ===  Ávila || Zamora || Madrid
+Devuelve: Madrid por que no exista zamora ni Ávila
+
+9.- ¿Número de ciudades que componen la colección?
+
+ db.ciudades.count()
+
+10.- Ciudades que empiecen por “B” o acaben por “z”
+db.ciudades.find({$or:[{ciudad:/^B/},{ciudad:/z$/}]})
+
+//
+ db.ciudades.find({},{ciudad:1,_id:0,capital:1}).sort({ciudad:1}).limit(4)

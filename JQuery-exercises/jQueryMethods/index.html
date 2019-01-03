@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Introduction</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css.css">
+		<!-- 2 Maneras de meter JQuery por link o por archivo descargado-->
+	<script type="text/javascript" src="jQuery.js"></script>
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+	<h1>jQuery Methods</h1>
+	<input type="text" id="text" name="text" placeholder="your name">
+	<select>
+		<option value="turtle">turtle</option>
+		<option value="gato">gato</option>
+		<option value="chico">chico</option>
+	</select>
+	<p>the image content will be changed using the attr method</p>
+	<img src="https://yt3.ggpht.com/-FJXWJ1x1bEQ/AAAAAAAAAAI/AAAAAAAAAAA/ZtyuZ-elFr4/s900-c-k-no-mo-rj-c0xffffff/photo.jpg">
+	<ul>
+		<li>Skittle</li>
+		<li>Oreo</li>
+		<li>Churros</li>
+	</ul>
+	<script type="text/javascript">
+		//changing the text content
+		$("h1").text("jQuery Methods changed header using .text");
+		$("ul").html("<li>My 3 li were modifed using the html method</li><li>Also I added the class done using .addClass method</li><li>And it will get removed from the last li using removeClass Method</li>");
+		$("img").attr("src","https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperbrowse.com%2Fmedia%2Fimages%2F750795.jpg&f=1");
+		$("li").addClass("done");
+		$("li:last").removeClass("done");
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+EJERCICIO Colección Restaurantes
+Estructura  “general” de los documentos de la colección Restaurantes
+{"address": {"building": "1007","coord": [ -73.856077, 40.848447 ],"street": "Morris Park Ave","zipcode": "10462"},"borough": "Bronx","cuisine": "Bakery","grades": [{ "date": { "$date": 1393804800000 }, "grade": "A", "score": 2 },{ "date": { "$date": 1378857600000 }, "grade": "A","score": 6 },{ "date": { "$date": 1358985600000 }, "grade": "A", "score": 10 },{ "date": { "$date": 1322006400000 }, "grade": "A","score": 9 },{ "date": { "$date": 1299715200000 }, "grade": "B", "score": 14 }],"name": "Morris Park Bake Shop","restaurant_id": "30075445"}
+Cuestiones a resolver
+
+1.Mostrar todos los documentos en la colección.
+db.restaurantes.find({})
+
+2.Mostrar los campos restaurant_id, name, borough y cuisine para todos los documentos en la colección.
+db.reataurantes.find({}, {_id:0,restaurant_id:1,name:1,borough:1,cousine:1}).limit10
+
+3.Mostrar los campos restaurant_id, name, borough y cuisine, pero excluya el campo _id para todos los documentos en la colección.
+db.reataurantes.find({},{_id:0})
+
+4.Mostrar los campos restaurant_id, name, borough y zip code, pero excluya el campo _id para todos los documentos en la colección.
+db.restaurante.find({},{_id:0,restaurante_id:1,borough:1,"adress.zipcode":1})
+
+5.Mostrar todo el restaurante que se encuentra en el barrio (borough) Bronx.
+db.restaurante.find({borough:$eq:"bronx"})
+
+6.Mostrar los primeros 5 restaurantes que se encuentran en el barrio Bronx.
+db.restaurantes.find({borought:"bronx"}).limit5
+
+7.Mostrar los siguientes 2 restaurantes después de omitir los5 primerosque se encuentran en el barrio Bronx..
+db.restaurantes.find({borought:"bronx"})skip(5).limit2
+
+8.Encontrar los restaurantes que obtuvieron una puntuación de más de 90
+db.restaurantes.find({"grades.score":{$gt:90}})
+
+.9.Encontrar los restaurantes que obtuvieron una puntuación demás de 80 pero menos de 100.
+db.restaurantes.find({"grades.score":{$gt:80,$lt:100}})
+
+10.Encontrar los restaurantes que se encuentran con unvalor de latitud menor que -95.754168.
+db.restaurantes.find({"adress.cord":{$lt:-95.754168.}})
+
+11.Encontrar los restaurantes que no preparan ninguna cocina "estadounidense" y su calificaciónesmás de 70 y una latitud menor que -65.754168.
+db.restaurantes.find({$and:["cousine":{$ne:"American"}},{"grades.score":{$gt:70}},{"address.cord":{$lt:-65.754168.}}]})
+
+
+12.Encontrar los restaurantes que no preparan ninguna cocina "estadounidense" y obtuvieronuna puntuación de más de 70 y ubicada en la longitud menor de -65.754168. PARA COGER LA SEGUNDA POSICION DE UN ARRAY SE HACE ASI NOMBREDELCAMPO.1 ES COMO ARRAY [1]
+db.restaurantes.find({$and:["cousine":{$ne:"American"}},{"grades.score":{$gt:70}},{"address.cord.2":{$lt:-65.754168.}}]})
+
+13.Encontrar los restaurantes que no preparan ninguna cocina "estadounidense" y que haya obtenido un punto de calificación "A" que no pertenece al distrito de Brooklyn. El documento debe mostrarse de acuerdo con el tipo decocina en orden descendente.
+db.restaurantes.find({$and:["cousine":{$ne:"American"}},{"gramdes.grade":"A"},{"borough":{$ne:"brooklyn"})]},{_id:0,borogh:1,cousine:1,name:1,restaurant_id:1}).sort(borough:-1}).limit(5).pretty()
+
+14.Encontrar el ID del restaurante, el nombre, el distrito y el tipo de cocina para los restaurantes que contienen 'Wil' como las tres primeras letras de su nombre.
+db.restaurant.find({name:{$eq: /^wil/}},{_id:0,borogh:1,cousine:1,name:1,restaurant_id:1}).sort(borough:-1}).limit(5).pretty()
+
+15.Encontrarel ID del restaurante, el nombre, el distrito y el tipo de cocina de los restaurantes que contienen 'ces' como las tres últimas letras de su nombre.
+db.restaurant.find({name:{$eq: /ces$/}},{_id:0,borogh:1,cousine:1,name:1,restaurant_id:1}).sort(borough:-1}).limit(5).pretty()
+
+16.Encontrarel ID del restaurante, el nombre, el distrito y el tipo decocina para los restaurantes que contienen 'Reg' como tres letras en algún lugar de su nombre.
+
+
+17.Encontrarlos restaurantes que pertenecen al Bronx de la ciudad y preparó un plato estadounidense o chino
+db.restaurant.find({$and:[{borough:"bronx"},$or:[{cousine: {in"American","Chinesse"}]      {_id:0,borogh:1,cousine:1,name:1,restaurant_id:1}).sort(borough:-1}).limit(5).pretty()
+
+18.Encontrarel ID del restaurante, el nombre, el distrito y el tipo decocina de los restaurantes que pertenecen al condado de Staten Island o Queens o Bronxor Brooklyn.
+db.restaurant.find({$or:[{borough:"bronx"},{borough:"quuens"},{borough:"staten Island"},{borough:"brooklyn"}]{_id:0,borogh:1,cousine:1,name:1,restaurant_id:1}).sort(borough:-1}).limit(5).pretty()
+
+19.Encontrarel ID del restaurante, el nombre, el distrito y el tipo de cocina para los restaurantes que no pertenecen al distrito de Staten Island o Queens o Bronxor Brooklyn
+
+20.Encontrarel ID del restaurante, el nombre, el distrito y el tipo de cocinapara los restaurantes que obtuvieron una puntuación que no supera el 10.
+
+
+21.Encontrar el ID del restaurante, el nombre, el distrito y el tipo decocina de los restaurantes que prepararon un plato, excepto "Americano" y "Chinees" o el nombre del restaurante comienza con la letra "Wil"
+db.restaurant.find($and[$or[${cousine: {ni"American","Chinesse"}]{name:{$eq: /^wil/}]
+,{_id:0,borogh:1,cousine:1,name:1,restaurant_id:1}).sort(borough:-1}).limit(5).pretty()
+
+
+22.Encontrarel ID del restaurante, el nombre y las calificaciones de esos restaurantes que obtuvieron una calificación de "A" y obtuvieron 11 puntos en un ISODate "2014-08-11T00: 00: 00Z" entre muchas de las fechas de laencuesta"grades.date":ISODate("2014-08-11T00:00:00Z")
+
+23.Encontrarel ID del restaurante, el nombre y las calificaciones de los restaurantes en los que el segundo elemento de la matriz de calificaciones contiene una calificación de "A" y una puntuación de 9 en un ISODate "2014-08-11T00: 00: 00Z"
+db.restaurantes.find({"grades.grade.1": "A"),
+
+24.Encontrar el ID del restaurante, el nombre, la dirección y la ubicación geográfica de los restaurantes donde el segundo elemento de la matriz de coordenadas contiene un valor que es más de 42 y hasta 52
+db.restaurante.find({"adress.cord.1":{$gt:42,$lt:52}})
+
+25.Organizarelnombre de los restaurantes en orden ascendente junto con todas las columnas.
+
+26.Organizarel nombre de los restaurantes en forma descendente junto con todas las columnas.
+
+27.Organizarel nombre del tipo decocina en orden ascendente y para esa misma cocina, debe estardescendentementeordenados por barrios.
+
+28.Saber si todas las direcciones contienen la calle o no.Mostraraquellas que sí.
+
+29.Seleccionartodos los documentos en la colección de restaurantes donde el valor del campo “coord.”es Doble
+
+30.Seleccionarel Id del restaurante, el nombre y las calificaciones de los restaurantes para aquellosrestaurantes que devuelven 0 como resto después de dividir supuntuación por 7
+
+31.Encontrarel nombre, el municipio, la longitud, la actitud y el tipo decocina del restaurante para esos restaurantes que contengan 'mon' como tres letras en algún lugar de su nombre
+
+32.Encontrarel nombre del restaurante, el municipio, la longitud y la latitud y el tipo decocina para los restaurantes que contengan 'Mad' como las tres primeras letras de su nombre

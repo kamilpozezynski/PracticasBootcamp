@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+h1{
+    color:RGB(229, 9, 20);
+    font-size: 3rem;
+    position:absolute;
+    text-transform:uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow: 0 0 10px #000;
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.bg-img {
+    width: 100%;
+    opacity: 0.8;
+    background-size: cover;
+    background-repeat:no-repeat;
+
+
+}
+
+h2{
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-align: left;
+}
+.sesion1{
+    color:#A4A4A4;
+}
+span a{
+    text-decoration: none;
+    color:white;
+}
+.sin{
+    color:#A4A4A4;
+    display: inline-block;
+}
+.suscribete{
+    position: relative;
+    top: -1.3rem;
+    left: 10rem;
+    display: inline-block;
+}
+#e-mail {
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.9em;
+    width: 19rem;
+    height: 3rem;
+    border: solid transparent;
+    border-radius: 0.5rem;
+    background-color:#2E2E2E;
+    color:#e5e5e5;
+}
+#contraseña{
+    padding-left: 1rem;
+    font-size: 1rem;
+    width: 19rem;
+    height: 3rem;
+    border: solid transparent;
+    border-radius: 0.5rem;
+    background-color:#2E2E2E;
+    color:#e5e5e5;
+    margin-bottom: 3rem;
+}
+#iniciar{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    width: 19.5rem;
+    height: 3rem;
+    border: solid transparent;
+    border-radius: 0.5rem;
+    background-color:RGB(229, 9, 20);
+    color:white;
+}
+.recuerdame{
+    font-size: 0.85rem;
+    background-color: transparent;
+    color:#A4A4A4;
+    display: inline;
+}
+.fb{
+    position:relative;
+    top: 1.2rem;
+}
+.space{
+    margin-top: 10rem;
+}
+.sesion{
+    font-size: 0.75rem;
+    background-color: transparent;
+    color: #A4A4A4;
+    padding-left: 2rem;
+}
+
+.ayuda{
+    font-size: 0.85rem;
+    background-color: transparent;
+    color:#A4A4A4;
+    padding-left: 7rem;
+    cursor: default;
+}
+
+.formulario-iniciar-sesion {
+    padding-left: 4rem;
+    padding-right: 5rem;
+    margin-top: 7rem;
+    border: solid transparent;
+    width: 20rem;
+    height: 35rem;
+    border-radius: 0.1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    display: flex;
+    position: absolute;
+    top: 52%;
+    left: 50.5%;
+    transform: translateX(-50%) translateY(-56%);
+    flex-direction: column;
+}

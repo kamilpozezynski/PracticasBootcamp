@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>jQuery Effects</title>
+</head>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	.container{
+		display: flex;
+		justify-content: space-between;
+	}
+	.item{
+		background-color: green;
+  		width: 100px;
+  		margin: 10px;
+  		text-align: center;
+  		line-height: 75px;
+  		font-size: 30px;
+	}
+	.container1{
+		display: flex;
+		justify-content: space-between;
+	}
+	.item1{
+		background-color: green;
+  		width: 100px;
+  		margin: 10px;
+  		text-align: center;
+  		line-height: 75px;
+  		font-size: 30px;
+	}
+</style>
+<body>
+	<button class="button">Click</button>
+	<div class="container">
+		<div class="item">Please don´t fade me</div>
+		<div class="item">I´m begging you</div>
+		<div class="item">help help help!!!</div>
+	</div>
+	<button class="button1">Click</button>
+		<div class="container1">
+		<div class="item1">Please don´t fade me</div>
+		<div class="item1">I´m begging you</div>
+		<div class="item1">help help help!!!</div>
+	</div>
+
+	
+	<script type="text/javascript">
+		$(".button").on("click",function(){
+			$(".item").fadeToggle(1000,function(){
+			//(this).remove(); con este metodo borramos los elementos del dom ya que esto solo les da display none ;	
+			});
+		});
+		$(".button1").on("click",function(){
+			$(".item1").slideToggle();
+		});
+
+	</script>
+</body>
+</html>
